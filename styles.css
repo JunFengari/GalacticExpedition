@@ -1,0 +1,856 @@
+/* ---------------------------------------------------- General styles ----------------------------------------------------------*/
+@font-face {
+    font-family: 'Astrospace';
+    src: url('./fonts/AstroSpace-eZ2Bg.ttf');
+}
+
+/*setting the background and font defaults for each page */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    background: linear-gradient(180deg, black, rgb(47, 1, 60));
+    font-family: 'Astrospace';
+    color: rgb(153, 53, 189);
+}
+
+/* centering the main content box, and attempting to get the footer not to levitate in the middle of the page */
+.container {
+    margin: auto;
+    min-height: 100vh;
+    flex: 1;
+}
+
+/* below are the defaults for each page title and navigation styles and functionality*/
+.maintitle {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    color: rgb(251, 135, 222);
+    font-size: clamp(8px, 2vw, 2vw);
+}
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0),
+            rgba(0, 0, 0, 0.6)
+        ),
+        url(./pics/bannernav.webp);
+    background-size: cover;
+    background-position: center;
+    height: 150px;
+}
+
+nav li {
+    display: inline;
+    padding: 3em;
+}
+
+nav li a {
+    color: pink;
+
+    font-size: clamp(7px, 2vw, 20px);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: rgb(42, 0, 37);
+}
+
+nav li a:hover {
+    color: aliceblue;
+
+    cursor: pointer;
+    font-style: italic;
+    background-color: rgb(69, 2, 62);
+}
+
+.btnactive {
+    color: #fd1892;
+
+    font-style: italic;
+    background-color: rgb(83, 3, 75);
+}
+
+nav li > a > img {
+    /* height: 20px;
+    width: 20px; */
+    display: inline-block;
+    vertical-align: middle;
+
+    width: clamp(
+        13px,
+        2vw,
+        22px
+    ); /* Adjusts the width based on viewport size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/*--- flip-cards and original comments from w3schools on what each thing does. Sizing and styles adjusted. ---*/
+.flipcardcontainer {
+    display: flex;
+    justify-content: center; /* centers cards horizontally */
+    align-items: center; /* centers cards vertically */
+    flex-wrap: wrap; /* allows cards to wrap if there's not enough space */
+    gap: 30px; /* optional: adds space between the cards */
+    padding: 20px;
+}
+/* The flip card container  */
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+    cursor: pointer;
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+    color: black;
+    border-radius: 25px;
+}
+
+/* Style the back side */
+.flip-card-back {
+    background-image: url(./pics/alternatebg.jpg);
+    color: rgb(153, 53, 189);
+    transform: rotateY(180deg);
+    padding: 10px; /* Adds space around the text */
+    box-sizing: border-box; /* Ensures padding stays inside the card size */
+    border-radius: 25px;
+}
+
+.flip-card-back > h1 {
+    color: rgb(251, 135, 222);
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* picture fills the card and doesn't distort*/
+    display: block;
+    border-radius: 25px;
+}
+
+/*--- end flipcard ---*/
+
+/* settings for larger image on the index home page */
+.content > img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+/* stylings for the main content box, including the transparency effect background, background image, 
+rainbox border snippet, and keyframes animation for background glow */
+.content {
+    background: rgba(
+        59,
+        4,
+        34,
+        0.585
+    ); /* Adjust transparency for a glass effect */
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 80%;
+    padding: 20px;
+    font-size: smaller;
+
+    /* Create a rounded, window-like border */
+    border-radius: 10px;
+    border: 5px solid transparent;
+    border-image: linear-gradient(
+        to bottom right,
+        #b827fc 0%,
+        #2c90fc 25%,
+        #b8fd33 50%,
+        #fec837 75%,
+        #fd1892 100%
+    );
+    border-image-slice: 1;
+
+    /* Add box-shadow for depth */
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2),
+        /* Outer glow */ 0 0 10px rgba(0, 0, 0, 0.5); /* Inner shadow for depth */
+
+    background-image: url('./pics/alternatebg.jpg');
+    background-blend-mode: overlay; /* Overlay effect for the stars */
+    background-size: cover; /* Ensure the star pattern covers the whole area */
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+    }
+    50% {
+        box-shadow: 0 4px 15px rgba(255, 255, 255, 0.4);
+    }
+    100% {
+        box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+    }
+}
+
+.content {
+    animation: glow 3s infinite;
+}
+
+.content > h1 {
+    color: rgb(251, 135, 222);
+}
+
+/*end content box*/
+
+/* controlling the behaviour of the image container */
+.paragraphpics {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    gap: 30px;
+    padding: 20px;
+}
+
+/*dimensions + display for images within the paragraphs on the main page */
+.paragraphpics > img {
+    object-fit: cover;
+    display: block;
+    width: 300px;
+    height: 200px;
+}
+
+/* footer styles with the same gradient as in nav, alignment, and text styles */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+
+    background-image: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0)
+        ),
+        url(./pics/bannernav.webp);
+
+    height: 50px;
+}
+
+footer > p {
+    color: rgb(215, 156, 206);
+    text-align: center;
+}
+
+/*-------------------------------------------------------- game styles -------------------------------------------------------------*/
+
+/* centering the game container in the middle of the main container */
+.game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 20px;
+
+    max-width: 500px;
+}
+
+/* guess a number prompt, font styles */
+.gamepromptuser {
+    color: rgb(251, 135, 222);
+    font-family: 'Astrospace';
+    font-size: clamp(14px, 1.8vw, 23px);
+    text-align: center;
+}
+
+/* feedback for the number you gave, or winning text, fonts, alignment and padding */
+#gameMessage {
+    font-family: 'Astrospace';
+    font-size: medium;
+    color: antiquewhite;
+
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(3, 0, 2);
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* input box, alignment, text, size */
+#guess {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 50%;
+    padding: 10px;
+    margin: auto;
+    border: 2px solid #e412a5;
+    border-radius: 4px;
+    font-family: 'Astrospace';
+    font-size: medium;
+}
+
+/* submit button, alignment, spacing around, colors, fonts, cursor, and hover below */
+#submitGuess {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: #0b1a86;
+    color: white;
+    padding: 10px 15px;
+
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    font-family: 'Astrospace';
+    font-size: medium;
+}
+
+#submitGuess:hover {
+    background-color: #e412a5;
+}
+
+/*play again button stylings */
+#playAgain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 5px;
+
+    background-color: #4d038e;
+    color: antiquewhite;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    font-family: 'Astrospace';
+    font-size: medium;
+}
+
+#playAgain:hover {
+    background-color: #0056b3;
+}
+
+/*----------------------------------------------------- gallery specific styles ---------------------------------------------------- */
+
+/*--- flip card functionality with gallery edits to size and behaving within the content box ---*/
+.flipcardcontainergall {
+    display: flex;
+    justify-content: center; /* centers cards horizontally */
+    align-items: center; /* centers cards vertically */
+    flex-wrap: wrap; /* allows cards to wrap if there's not enough space */
+    gap: 30px; /* optional: adds space between the cards */
+    padding: 20px;
+}
+/* The flip card container */
+.flip-cardgall {
+    background-color: transparent;
+    width: 250px;
+    height: 250px;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-innergall {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-cardgall:hover .flip-card-innergall {
+    transform: rotateY(180deg);
+    cursor: pointer;
+}
+
+/* Position the front and back side */
+.flip-card-frontgall,
+.flip-card-backgall {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-frontgall {
+    background-color: #e075bc;
+    color: black;
+    border-radius: 25px;
+}
+
+/* Style the back side */
+.flip-card-backgall {
+    background-image: url(./pics/alternatebg.jpg);
+    color: rgb(153, 53, 189);
+    transform: rotateY(180deg);
+    padding: 10px; /* Adds space around the text */
+    box-sizing: border-box; /* Ensures padding stays inside the card size */
+    border-radius: 25px;
+}
+.flip-card-backgall > h1 {
+    color: rgb(251, 135, 222);
+}
+/*--- end flipcard ---*/
+
+/*------------------------------------------------ documentation specific styles ---------------------------------------------------*/
+
+/* adding a new content box on top of the original content box, similar styles as before */
+.normalcard {
+    background: rgba(59, 4, 34, 0.585);
+    margin: auto;
+    justify-content: left;
+    align-items: center;
+    display: flex;
+
+    width: 70%;
+    height: 10%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    /* Add box-shadow for depth (space window glow) */
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2),
+        /* Outer glow */ 0 0 10px rgba(0, 0, 0, 0.5); /* Inner shadow for depth */
+
+    background-image: url('./pics/alternatebg.jpg'); /* You can use a transparent star overlay */
+    background-blend-mode: overlay; /* Overlay effect for the stars */
+    background-size: cover; /* Ensure the star pattern covers the whole area */
+
+    border: 5px solid transparent;
+    border-image: linear-gradient(
+        to bottom right,
+        #b827fc 0%,
+        #2c90fc 25%,
+        #b8fd33 50%,
+        #fec837 75%,
+        #fd1892 100%
+    );
+    border-image-slice: 1;
+}
+
+.normalcard > ul {
+    font-size: clamp(11px, 1.5vw, 2vw);
+}
+
+.normalcard > ul > li {
+    margin-bottom: 10px;
+}
+
+/* adjustments for the author picture specifically */
+#docselfie {
+    justify-content: left;
+    width: 30%;
+    height: 30%;
+}
+
+/*the main container but with the addition of grid layouts for the boxes to be arranged properly*/
+.containerdoc {
+    background: rgba(59, 4, 34, 0.585);
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* ^ adjusts the amount of columns depending on the screen size + their min/max width that they take up.
+    Below is the gap between each, and stretching forces them all to be the same length which looks neat.*/
+    gap: 12px;
+    align-items: stretch;
+
+    width: 70%;
+    height: 80%;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+    border-radius: 10px;
+    border: 5px solid transparent;
+    border-image: linear-gradient(
+        to bottom right,
+        #b827fc 0%,
+        #2c90fc 25%,
+        #b8fd33 50%,
+        #fec837 75%,
+        #fd1892 100%
+    );
+    border-image-slice: 1;
+
+    /* Add box-shadow for depth (space window glow) */
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2),
+        /* Outer glow */ 0 0 10px rgba(0, 0, 0, 0.5); /* Inner shadow for depth */
+
+    /* Optional: Background image for starry reflections */
+    background-image: url('./pics/alternatebg.jpg'); /* You can use a transparent star overlay */
+    background-blend-mode: overlay; /* Overlay effect for the stars */
+    background-size: cover; /* Ensure the star pattern covers the whole area */
+}
+
+/*styles for the actual boxes, and the styles for all the elements within them.*/
+.containerdoc .docbox {
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: rgb(251, 135, 222);
+}
+
+.docbox > p {
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.docbox > ul {
+    font-size: small;
+}
+
+/*had issues getting the images in documentation to behave, so I targeted each separately... 
+not sure if this could be cleaned up */
+.docbox > p > .filestructurepic,
+.screenshotofcodepic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.filestructurepic > img {
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+    width: 40%;
+}
+
+.screenshotofcodepic > img {
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+    width: 90%;
+}
+
+/*-------------------------------------------------- form specific styles ------------------------------------------------------ */
+
+/*different style required for the nav icon*/
+nav li.imgbtnactive a {
+    background-color: rgb(83, 3, 75);
+}
+
+/*font color of all questions*/
+label,
+legend {
+    color: #fd1892;
+}
+
+/*thank you message styles that appears after form fillout.*/
+#message {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    color: #fd1892;
+    font-size: medium;
+}
+
+/*font color for all multiple choice and y/n answers*/
+.fieldsetlabel {
+    color: rgb(251, 135, 222);
+}
+
+/*sub-titles within form, additional spacing*/
+#cadetsignup > h2 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+/*spacing other elements nicely*/
+.form-group {
+    margin-bottom: 15px;
+}
+
+.radio-group {
+    margin-bottom: 15px;
+}
+
+.custom-group {
+    margin-bottom: 15px;
+}
+
+/*button styles and keyframes glow applied here too*/
+#signupbutton {
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    background-color: #0b1a86;
+    color: white;
+    padding: 10px 15px;
+
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    font-family: 'Astrospace';
+    font-size: medium;
+}
+
+#signupbutton:hover {
+    cursor: pointer;
+    animation: glow 3s infinite;
+}
+
+/*-------------------------------------------------------Media Queries-----------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------*/
+
+@media (max-width: 1300px) {
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 150px;
+    }
+
+    nav li {
+        display: inline;
+        padding: 10px;
+    }
+
+    .flip-card {
+        width: 200px;
+        height: 200px;
+    }
+
+    .flip-card-back > h1 {
+        font-size: medium;
+    }
+
+    .flip-card-back > p {
+        font-size: small;
+    }
+
+    .flip-cardgall {
+        width: 200px;
+        height: 200px;
+    }
+
+    .flip-card-backgall > h1 {
+        font-size: medium;
+    }
+
+    .flip-card-backgall > p {
+        font-size: small;
+    }
+
+    .radio-group {
+        display: flex;
+        align-items: center;
+    }
+
+    .radio-group > label.hypersleep-yes {
+        display: block;
+    }
+}
+
+@media (max-width: 760px) {
+    nav li {
+        display: inline;
+        padding: 5px;
+    }
+
+    .flip-card {
+        width: 150px;
+        height: 150px;
+    }
+
+    .flip-card-back > h1 {
+        font-size: small;
+    }
+
+    .flip-card-back > p {
+        font-size: x-small;
+    }
+
+    .flip-cardgall {
+        width: 150px;
+        height: 150px;
+    }
+
+    .flip-card-backgall > h1 {
+        font-size: small;
+    }
+
+    .flip-card-backgall > p {
+        font-size: x-small;
+    }
+}
+
+@media (max-width: 650px) {
+    .container > .content > h1 {
+        font-size: small;
+    }
+
+    .container > .content > p {
+        font-size: x-small;
+    }
+
+    footer {
+        font-size: small;
+    }
+    /*arranging navigation elements in a custom way so rocket icon is in the middle*/
+    nav ul {
+        display: grid;
+        grid-template-areas:
+            'home rocket arcade'
+            'mission rocket briefing';
+        gap: clamp(20px, 60px, 9vw);
+        justify-content: center;
+        align-items: center;
+
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li {
+        justify-self: center;
+    }
+
+    nav ul li:nth-child(1) {
+        grid-area: home;
+    }
+
+    nav ul li:nth-child(2) {
+        grid-area: mission;
+    }
+
+    nav ul li:nth-child(3) {
+        grid-area: rocket;
+    }
+
+    nav ul li:nth-child(4) {
+        grid-area: arcade;
+    }
+
+    nav ul li:nth-child(5) {
+        grid-area: briefing;
+    }
+
+    #guess {
+        font-size: x-small;
+    }
+
+    #submitGuess {
+        font-size: small;
+    }
+}
+
+@media (max-width: 580px) {
+    label,
+    legend {
+        font-size: x-small;
+    }
+
+    #cadetsignup > h2 {
+        font-size: small;
+    }
+}
+
+@media (max-width: 490px) {
+    .containerdoc {
+        grid-template-columns: 1fr;
+    } /*making 1 column after this media width*/
+
+    #submitGuess {
+        font-size: x-small;
+    }
+
+    /* prevents text breaking below 300px, not strictly necessary */
+    nav li a {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start; /*prevents input boxes spanning whole width*/
+    }
+
+    .docbox > ul > li {
+        font-size: small;
+    }
+
+    .paragraphpics > img {
+        width: 100%;
+        height: auto;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 370px) {
+    #guess {
+        font-size: xx-small;
+    }
+
+    .docbox > p {
+        font-size: small;
+    }
+
+    .docbox > ul > li {
+        font-size: x-small;
+    }
+}
+
+/*---------------------------------------------------------end!-----------------------------------------------------------------*/

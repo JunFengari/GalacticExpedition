@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+
+        <title>Cadet Signup</title>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Mission Log</a></li>
+                <li class="imgbtnactive">
+                    <a href="form.html"
+                        ><img src="./pics/rocketlaunchbutton.png" alt="button"
+                    /></a>
+                </li>
+                <li><a href="Play.html">Space Arcade</a></li>
+                <li><a href="documentation.html">Mission Briefing</a></li>
+            </ul>
+        </nav>
+
+        <div class="maintitle"><h1>Cadet Signup</h1></div>
+        <div class="container">
+            <div class="content">
+                <div id="message"></div>
+                <form id="cadetsignup">
+                    <h2>Basic Information</h2>
+
+                    <div class="form-group">
+                        <label for="species">Species: </label>
+                        <select id="species">
+                            <option value="" disabled selected>
+                                Select one
+                            </option>
+                            <option value="Human">Human</option>
+                            <option value="Glitchtron">Glitchtron</option>
+                            <option value="Nanoborg">Nanoborg</option>
+                            <option value="Vulcan">Vulcan</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="firstname">First Name: </label>
+                        <input
+                            type="text"
+                            id="firstname"
+                            placeholder="Firstname"
+                            required
+                        />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lastname">Family Name: </label>
+                        <input
+                            type="text"
+                            id="lastname"
+                            placeholder="Surname"
+                            required
+                        />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="intergalacticid">Intergalactic ID: </label>
+                        <input
+                            type="text"
+                            id="intergalacticid"
+                            placeholder="ID Chip Number"
+                            required
+                        />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputbirthdate">Birthdate: </label>
+                        <input type="date" id="inputbirthdate" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="selectrank">Galactic Rank: </label>
+                        <select id="selectrank" required>
+                            <option value="" disabled selected>
+                                Select one
+                            </option>
+                            <option value="Admiral">Admiral</option>
+                            <option value="Captain">Captain</option>
+                            <option value="Cadet">Cadet</option>
+                            <option value="Civilain">Civilian</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputaddress">Home Address: </label>
+                        <input
+                            type="text"
+                            id="inputaddress"
+                            placeholder="Address"
+                            required
+                        />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="selectplanet">Home Planet: </label>
+                        <select id="selectplanet" name="Home Planet">
+                            <option value="" disabled selected>
+                                Select one
+                            </option>
+                            <option value="Earth">Earth</option>
+                            <option value="Mars">Mars</option>
+                            <option value="Neptune">Neptune</option>
+                            <option value="Jupiter">Jupiter</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="inputlicense">SpaceCraft Licence: </label>
+                        <input
+                            type="text"
+                            id="inputlicense"
+                            placeholder="Licence Plate number"
+                        />
+                    </div>
+
+                    <h2>Space Travel Information</h2>
+
+                    <div class="radio-group">
+                        <label for="hypersleep-yes"
+                            >Do you consent to hypersleep?</label
+                        >
+                        <input
+                            type="radio"
+                            id="hypersleep-yes"
+                            name="hypersleep"
+                            value="yes"
+                            required
+                        />
+                        <label class="fieldsetlabel" for="hypersleep-yes"
+                            >Yes</label
+                        >
+
+                        <input
+                            type="radio"
+                            id="hypersleep-no"
+                            name="hypersleep"
+                            value="no"
+                        />
+                        <label class="fieldsetlabel" for="hypersleep-no"
+                            >No</label
+                        >
+                    </div>
+
+                    <div class="radio-group">
+                        <label for="hypersleep-yes"
+                            >Do you consent to cryosleep?</label
+                        >
+                        <input
+                            type="radio"
+                            id="cryosleep-yes"
+                            name="cryosleep"
+                            value="yes"
+                            required
+                        />
+                        <label class="fieldsetlabel" for="cryosleep-yes"
+                            >Yes</label
+                        >
+
+                        <input
+                            type="radio"
+                            id="cryosleep-no"
+                            name="cryosleep"
+                            value="no"
+                        />
+                        <label class="fieldsetlabel" for="cryosleep-no"
+                            >No</label
+                        >
+                    </div>
+
+                    <fieldset class="custom-group">
+                        <legend>
+                            Space Suit Customizations: (Subject to additional
+                            fees)
+                        </legend>
+                        <input type="checkbox" id="jetpack" value="jetpack" />
+                        <label class="fieldsetlabel" for="jetpack"
+                            >Inbuilt Jetpack</label
+                        >
+                        <br />
+                        <input
+                            type="checkbox"
+                            id="BootDaggers"
+                            value="BootDaggers"
+                        />
+                        <label class="fieldsetlabel" for="BootDaggers"
+                            >Retractable Boot Daggers</label
+                        >
+                        <br />
+                        <input
+                            type="checkbox"
+                            id="OxygenSupply"
+                            value="OxygenSupply"
+                        />
+                        <label class="fieldsetlabel" for="OxygenSupply"
+                            >Extended Oxygen Supply</label
+                        >
+                        <br />
+                        <input type="checkbox" id="visor" value="visor" />
+                        <label class="fieldsetlabel" for="visor"
+                            >Advanced statistics visor</label
+                        >
+                    </fieldset>
+
+                    <div class="form-group">
+                        <label for="selectrank">Space Suit Sizing: </label>
+                        <select id="selectsize" name="SuitSize">
+                            <option value="" disabled selected>
+                                Select one
+                            </option>
+                            <option value="xs">XS</option>
+                            <option value="s">S</option>
+                            <option value="m">M</option>
+                            <option value="l">L</option>
+                            <option value="xl">XL</option>
+                            <option value="vulcanstandard">
+                                Vulcan Standard
+                            </option>
+                            <option value="glitchtronstandard">
+                                Glitchtron Mechanosuit
+                            </option>
+                            <option value="nanobotstandard">
+                                Nanobot Mechanosuit
+                            </option>
+                        </select>
+                    </div>
+
+                    <h2>Safety & Privacy</h2>
+
+                    <div class="radio-group">
+                        <label for="radiation-yes"
+                            >The cadet accepts safety terms:</label
+                        >
+                        <input
+                            type="radio"
+                            id="radiation-yes"
+                            name="radiation"
+                            value="yes"
+                            required
+                        />
+                        <label class="fieldsetlabel" for="radiation-yes"
+                            >Yes</label
+                        >
+
+                        <input
+                            type="radio"
+                            id="radiation-no"
+                            value="no"
+                            name="radiation"
+                        />
+                        <label class="fieldsetlabel" for="radiation-no"
+                            >No</label
+                        >
+                    </div>
+
+                    <div class="radio-group">
+                        <label for="data-yes"
+                            >The cadet accepts data collection:</label
+                        >
+                        <input
+                            type="radio"
+                            id="data-yes"
+                            name="data"
+                            value="yes"
+                            required
+                        />
+                        <label class="fieldsetlabel" for="data-yes">Yes</label>
+
+                        <input
+                            type="radio"
+                            id="data-no"
+                            value="no"
+                            name="data"
+                        />
+                        <label class="fieldsetlabel" for="data-no">No</label>
+                    </div>
+
+                    <button id="signupbutton" type="submit">Sign up</button>
+                </form>
+
+                <script>
+                    let signupbutton = false;
+                    let cadetsignup = document.getElementById('cadetsignup');
+                    function handleForm(event) {
+                        event.preventDefault();
+                        console.log('hello');
+                        document.getElementById('message').innerText =
+                            'Thank you for submitting this form, cadet!';
+                        document.getElementById('cadetsignup').style.display =
+                            'none';
+                    }
+                    cadetsignup.addEventListener('submit', handleForm);
+                </script>
+            </div>
+        </div>
+
+        <footer>
+            <p>Website by Jun Fengari</p>
+        </footer>
+    </body>
+</html>

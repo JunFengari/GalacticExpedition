@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+
+        <title>Space Arcade</title>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Mission Log</a></li>
+                <li>
+                    <a href="form.html"
+                        ><img src="./pics/rocketlaunchbutton.png" alt="button"
+                    /></a>
+                </li>
+                <li><a href="Play.html" class="btnactive">Space Arcade</a></li>
+                <li><a href="documentation.html">Mission Briefing</a></li>
+            </ul>
+        </nav>
+        <div class="maintitle"><h1>Test Your Agility, Cadet!</h1></div>
+        <div class="container">
+            <div class="content">
+                <div class="game-container">
+                    <!-- guess a number title -->
+                    <p class="gamepromptuser">
+                        Guess a number between <span id="minLuku">5</span> and
+                        <span id="maxLuku">15</span>
+                    </p>
+
+                    <!-- guess box -->
+                    <input
+                        type="number"
+                        id="guess"
+                        placeholder="Enter your guess"
+                    />
+
+                    <!-- submission button -->
+                    <button id="submitGuess">Submit Guess</button>
+
+                    <!-- message -->
+                    <div id="gameMessage" class="game-message"></div>
+
+                    <!-- play again button -->
+                    <button id="playAgain" style="display: none">
+                        Play Again
+                    </button>
+                </div>
+
+                <script src="game.js"></script>
+            </div>
+        </div>
+        <footer>
+            <p>Website by Jun Fengari</p>
+        </footer>
+    </body>
+</html>

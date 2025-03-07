@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+
+        <title>Documentation</title>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="gallery.html">Mission Log</a></li>
+                <li>
+                    <a href="form.html"
+                        ><img src="./pics/rocketlaunchbutton.png" alt="button"
+                    /></a>
+                </li>
+                <li><a href="Play.html">Space Arcade</a></li>
+                <li>
+                    <a href="documentation.html" class="btnactive"
+                        >Mission Briefing</a
+                    >
+                </li>
+            </ul>
+        </nav>
+        <div class="maintitle"><h1>Documentation</h1></div>
+
+        <div class="normalcard">
+            <img src="./pics/selfiefordoc.jpg" alt="pic" id="docselfie" />
+
+            <ul class="authorul">
+                <li>Author: Jun Fengari</li>
+                <li>Student ID: AG4042</li>
+                <li>Class ID: ZJA-HTK24S1</li>
+            </ul>
+        </div>
+
+        <div class="containerdoc">
+            <div class="docbox">
+                <h4>Creative Process</h4>
+                <p>
+                    Starting out, I didn't plan anything specific, but instead
+                    thought of going for a simple design for the front page,
+                    that would fill assignment requirements, and started playing
+                    with how that would look. I added some styles that I found
+                    appealing, and once I was happy with the general look, I
+                    started thinking about content. <br />
+                    <br />
+                    At first, I thought I would make a CV, and then a blog, but
+                    eventually, I came up with the idea to create space-themed
+                    content, as my styles already had some dark colors and stars
+                    in them, and I was able to tie in the game concept and form
+                    nicely into the fantasy space cadet recruitment idea. I also
+                    added more styles that synergized with my website concept.
+                    <br />
+                    I chose this over the other options because it gave me a
+                    good excuse and freedom to experiment with javascript and
+                    different implementations.
+                </p>
+            </div>
+            <div class="docbox">
+                <h4>File Structure and Testing</h4>
+                <p>
+                    Validation: CSS is valid, and all HTML is valid aside from
+                    the trailing slash infos.
+                    <br />
+                    Tested on: Firefox 131.0.3, Chrome 130.0.6723.70, and
+                    Microsoft Edge 130.0.2849.56. Works as intended.
+                    <br />
+                    <br />
+                    Tested on all devices in responsive dev-tools for basic
+                    layout and functionality. Responsivity works well above
+                    400px but will not break between 300-400px either. Under
+                    300px is not supported at this time.
+                    <br />
+                    <br />
+                    Below is my file structure, some of the file names are
+                    slightly different than the final page titles, but still
+                    clear enough. 5 HTMLs for 5 pages, one CSS file for all
+                    stylings, one JS file for the game code. The fonts include
+                    the one font used on all themed pages aside from this one,
+                    and pictures are all visible across the website.
+                    <br />
+                    I elected not to use a framework in my project.
+                    <br />
+                    <br />
+                    <span class="filestructurepic">
+                        <img src="./pics/filestructure.png" alt="pic" />
+                    </span>
+                </p>
+            </div>
+            <div class="docbox">
+                <h4>HTML Documentation</h4>
+                <p>
+                    The HTML for each of my pages is rather simple, with the
+                    exception of the game and the form, the rest is stuff we
+                    learnt in class. <br />
+                    <br />
+                    I made the structure of the form page using the guides on
+                    W3schools, and in Tiko-support Topi and I tested and
+                    troubleshooted the form submission functionality with
+                    different solutions from stackoverflow and mdn. I added
+                    javascript directly into the html this time, instead of
+                    making a separate file.
+                    <br />
+                    <br />
+                </p>
+                <h4>Challenges & Troubleshooting</h4>
+                <p>
+                    Overall, there were no impossible problems, but some areas
+                    took a good while to figure out. The hardest relevant
+                    problems were to do with the CSS and mediaqueries.
+                    Eventually as the page got long enough, it became more
+                    challenging to keep track of what was affecting what, and
+                    there may still be some repetition or overlapping elements
+                    that I missed.
+                    <br />
+                    <br />
+                    Issues with positioning were the most challenging by far.
+                    Particularly with finding a navigation style that looked
+                    decent on smaller screens. Using resources such as w3, mdn,
+                    stackoverflow and ChatGPT helped a lot to solve many of the
+                    issues, and TIKO support was the most invaluable resource.
+                    <br />
+                    <br />
+                    The game and the form were very challenging for sure, but I
+                    learnt a lot and had fun. I wanted to add more effects found
+                    on codepen, for example, but they were too complex for me to
+                    understand and implement correctly at this point.
+                </p>
+            </div>
+            <div class="docbox">
+                <h4>Game Documentation</h4>
+                <p>
+                    The original code for the numbers game is made by me as an
+                    assignment for our programming class.
+                    <br />
+                    Since we haven't exactly learned how to implement Javascript
+                    into websites (and I made the game near the beginning of the
+                    project, before learning functions in programming), I
+                    elected to ask ChatGPT to transform my code into website
+                    compatible code. This wasn't part of the assignment criteria
+                    so I felt I could liberally use ChatGPT for the code and
+                    functional structure of the game. <br />
+                    <br />
+                    There were inevitably quite a few tweaks needed for the game
+                    to function properly and as I intended. I fixed several
+                    issues, particularly with faulty inputs, in TIKO-support
+                    with the help of Topi. <br />
+                    <br />
+                    I now understand the new Javascript code of the game, and I
+                    can see that there's a function that does the same things my
+                    original code did, with if statements checking for errors
+                    and invalid inputs. Here is my original code:
+                    <br />
+                    <br />
+                    <span class="screenshotofcodepic">
+                        <img
+                            id="screenshotofcode"
+                            src="./pics/screenshotofcode.png"
+                            alt="picofcode"
+                        />
+                    </span>
+                </p>
+            </div>
+            <div class="docbox">
+                <h4>CSS Style Documentation</h4>
+                <p>
+                    There's a lot going on in my CSS file, and I tried to
+                    organize it well. The file is divided into sections that
+                    include the styling for each individual HTML page for
+                    clarity. I also added notes in relevant locations to clarify
+                    what element something affects, and generally in what ways.
+                    <br />
+                    I decided on the current structure to improve readability,
+                    with all the specific stylings for each page separated.
+                    <br />
+                    <br />
+                    General styles determines how the main index.html looks, as
+                    well as other styles throughout the webpage that don't need
+                    specific targetting: overall styling for the body, content
+                    containers, navigation, and footer, which generally remains
+                    the same throughout the separate pages. The @keyframes
+                    animation is generated by ChatGPT.<br />
+                    Also contained are the flipcard styles for the front page,
+                    and specific details such as how the images behave within
+                    the paragraph element. <br />
+                    <br />
+                    Next up are the styles required for the game to function and
+                    look the way I want it to. The stylings for the game are
+                    made by me, which include positioning, colors, borders,
+                    fonts, button styles, etc.
+                    <br />
+                    <br />
+                    Gallery styles just has the flipcards slightly modified in
+                    sizing and location in order to fit into the container.
+                    <br />
+                    <br />
+                    Documentation styles includes an additional content
+                    container, and a modified structure for the main content
+                    area, I utilized grid here with stretch to organize the
+                    boxes. The rest of the pages use flex. <br />
+                    This was challenging and it took a long time to find the
+                    correct solution for the boxes within the content container
+                    to line up as they do.
+                    <br />
+                    <br />
+                    Form styles mostly includes font colors for each element in
+                    the form, as well as styling for the submission button, and
+                    some positioning.
+                    <br />
+                    <br />
+                    Lastly are the mediaqueries for several different widths. I
+                    chose custom viewport widths which aligned with the
+                    fucntionality and breakpoints of my website. There are many
+                    more than required, but this ensures that the website worked
+                    and looked decent on all devices.
+                </p>
+            </div>
+
+            <div class="docbox">
+                <h4>Final Words</h4>
+                <p>
+                    Thanks for viewing! <br />
+                    Through this project, I feel like I internalized everything
+                    we learnt in class and put most of it into practice, and
+                    learned a whole lot more. Best of all, I had an absolute
+                    blast completing this! <br />
+                    Turning it in was the hardest part, I felt like I needed to
+                    continued perfecting everything. Admittedly I spent way more
+                    time on this than the proposed assignment hours.
+                    <br />
+                    <br />
+                </p>
+                <h4>Sources and Links</h4>
+                <p>
+                    Here are the sources and links to all the code snipets and
+                    images used in my work. I did not include individual links
+                    to each minor google or AI solution that I modified to suit
+                    my work.
+                </p>
+                <ul>
+                    <li>
+                        <a
+                            href="https://pixabay.com/illustrations/banner-header-stars-black-stars-1557817/"
+                            >Navigation and Footer Image Source</a
+                        >
+                        and
+                        <a href="https://pixabay.com/service/license-summary/"
+                            >Content License Summary</a
+                        >
+                    </li>
+                    <li>
+                        Images from
+                        <a href="https://pixabay.com/">Pixabay</a>
+                        and
+                        <a href=" https://unsplash.com/">Unsplash</a>
+                        and
+                        <a
+                            href="https://perchance.org/ai-text-to-image-generator"
+                            >Perchance AI image generator</a
+                        >
+                        and some of my own pictures from Iceland.
+                    </li>
+                    <li>
+                        Flipcard code snippet
+                        <a
+                            href="https://www.w3schools.com/howto/howto_css_flip_card.asp"
+                            >w3schools</a
+                        >
+                    </li>
+                    <li>
+                        Instructions for
+                        <a href="https://www.w3schools.com/html/html_forms.asp"
+                            >forms</a
+                        >
+                    </li>
+                    <li>
+                        Rainbow borders from
+                        <a href="https://codepen.io/unnegative/pen/dVwYBq "
+                            >codepen</a
+                        >
+                    </li>
+                    <li>
+                        Navigation Rocket Icon from
+                        <a href="https://fonts.google.com/icons"
+                            >Google Icons</a
+                        >
+                    </li>
+                    <li>
+                        Navigation Grid
+                        <a href="https://www.w3schools.com/css/css_grid.asp"
+                            >Guide</a
+                        >
+                    </li>
+                    <li>
+                        Aerospace front from
+                        <a
+                            href="https://www.fontspace.com/category/futuristic,modern,tech"
+                            >fontspace</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="https://www.w3schools.com/howto/howto_js_trigger_button_enter.asp"
+                            >Enter fucntionality code</a
+                        >
+                        for the game
+                    </li>
+                    <li>
+                        <a href="https://chatgpt.com/">ChatGPT</a>
+                        for troubleshooting and assistance. More info in
+                        previous sections.
+                    </li>
+                </ul>
+
+                <h4>Thank you for visiting my website!</h4>
+            </div>
+        </div>
+
+        <footer>
+            <p>Website by Jun Fengari</p>
+        </footer>
+    </body>
+</html>
